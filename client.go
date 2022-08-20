@@ -37,6 +37,8 @@ type Client interface {
 	GetUserPendingDepositTransactions(ctx context.Context, userID int64) ([]DepositTx, error)
 	// GetUserPendingWithdrawTransactions implement https://github.com/dangnguyendota-casino/andromeda-bep20-payment-gateway-document#get-user-pending-withdraw-transactions
 	GetUserPendingWithdrawTransactions(ctx context.Context, userID int64) ([]WithdrawTx, error)
+	// CheckDepositTx implement https://github.com/dangnguyendota-casino/andromeda-bep20-payment-gateway-document#check-deposit-transaction
+	CheckDepositTx(ctx context.Context, req CheckDepositTransactionReq) error
 }
 
 type client struct {

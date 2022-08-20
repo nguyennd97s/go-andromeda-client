@@ -35,17 +35,20 @@ func main() {
 	client.GetWithdrawTransactionsCount(context.Background(), 1)
 	// lấy các giao dịch rút đang pending của user id 1
 	client.GetUserPendingWithdrawTransactions(context.Background(), 1)
-	
+	// kiểm tra giao dịch 
+	client.CheckDepositTx(context.Background(), andromeda.CheckDepositTransactionReq{
+		UserID:          1,
+		TransactionHash: "0xccf29a252e8bf3caaacddf47ffac2422ab0cccd2135972e51186d00f8339a1d5",
+	})
 	// yêu cầu chuyển tiền 
-	withdrawReq := andromeda.WithdrawReq {
+	client.Withdraw(context.Background(), andromeda.WithdrawReq {
 		UserID    : 1,
 		Address   : "0xBC74a1868e84A3238948dEEbc59E81693DA1702a",
 		TokenName : "usdt",
 		Amount    : 0.145,
 		RequestID : "123",
 		Checksum  : "abcxyz",
-    }
-	client.Withdraw(context.Background(), withdrawReq)
+	})
 	
 }
 ```

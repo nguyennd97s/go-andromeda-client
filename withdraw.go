@@ -15,5 +15,5 @@ type WithdrawReq struct {
 }
 
 func (c *client) Withdraw(ctx context.Context, req WithdrawReq) error {
-	return c.call(ctx, http.MethodPost, "/withdraw", req, http.StatusCreated, nil)
+	return c.call(ctx, http.MethodPost, c.makeURL("/withdraw"), req, http.StatusCreated, nil)
 }

@@ -10,5 +10,7 @@ func Test_client_GetDepositTransactionsCount(t *testing.T) {
 	resp, err := testClient.GetDepositTransactionsCount(context.Background(), 1)
 	if assert.Equal(t, err, nil) {
 		t.Logf("%+v", resp)
+	} else {
+		t.Error(err)
 	}
 }
