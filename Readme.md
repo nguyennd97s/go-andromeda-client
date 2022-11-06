@@ -1,6 +1,6 @@
 # Andromeda Client 
 
-Thư viện client cho Andromeda Service được xây dựng dựa trên Document: https://github.com/dangnguyendota-casino/andromeda-bep20-payment-gateway-document
+Thư viện client cho Andromeda Service được xây dựng dựa trên Document: https://github.com/oriS-casino/andromeda-bep20-payment-gateway-document
 
 
 Example:
