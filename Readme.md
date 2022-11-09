@@ -1,6 +1,6 @@
 # Andromeda Client 
 
-Thư viện client cho Andromeda Service được xây dựng dựa trên Document: https://github.com/dangnguyendota-casino/andromeda-bep20-payment-gateway-document
+Thư viện client cho Andromeda Service được xây dựng dựa trên Document: https://github.com/oriS-casino/andromeda-bep20-payment-gateway-document
 
 
 Example:
@@ -10,7 +10,7 @@ package main
 
 import (
 	"context"
-	andromeda "github.com/dangnguyendota-casino/go-andromeda-client"
+	andromeda "github.com/oriS-casino/go-andromeda-client"
 	"github.com/ethereum/go-ethereum/common"
 )
 

@@ -1,4 +1,4 @@
-module github.com/dangnguyendota-casino/go-andromeda-client
+module github.com/oriS-casino/go-andromeda-client
 
 go 1.16
 

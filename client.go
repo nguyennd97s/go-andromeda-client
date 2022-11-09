@@ -17,27 +17,27 @@ import (
 type Client interface {
 	// Ping ping ping ping
 	Ping(ctx context.Context) error
-	// Withdraw implement https://github.com/dangnguyendota-casino/andromeda-bep20-payment-gateway-document#withdraw
+	// Withdraw implement https://github.com/oriS-casino/andromeda-bep20-payment-gateway-document#withdraw
 	Withdraw(ctx context.Context, req WithdrawReq) error
-	// UserCount implement https://github.com/dangnguyendota-casino/andromeda-bep20-payment-gateway-document#user-count
+	// UserCount implement https://github.com/oriS-casino/andromeda-bep20-payment-gateway-document#user-count
 	UserCount(ctx context.Context) (UserCountReq, error)
-	// GetUserAddress implement https://github.com/dangnguyendota-casino/andromeda-bep20-payment-gateway-document#get-user-address
+	// GetUserAddress implement https://github.com/oriS-casino/andromeda-bep20-payment-gateway-document#get-user-address
 	GetUserAddress(ctx context.Context, userID int64) (GetUserAddressResp, error)
-	// GetUserID implement https://github.com/dangnguyendota-casino/andromeda-bep20-payment-gateway-document#get-user-id
+	// GetUserID implement https://github.com/oriS-casino/andromeda-bep20-payment-gateway-document#get-user-id
 	GetUserID(ctx context.Context, address common.Address) (GetUserIDResp, error)
-	// GetUserCompletedDepositTransactions implement https://github.com/dangnguyendota-casino/andromeda-bep20-payment-gateway-document#get-user-completed-deposit-transactions
+	// GetUserCompletedDepositTransactions implement https://github.com/oriS-casino/andromeda-bep20-payment-gateway-document#get-user-completed-deposit-transactions
 	GetUserCompletedDepositTransactions(ctx context.Context, userID, pageSize, page int64) ([]DepositTx, error)
-	// GetUserCompletedWithdrawTransactions implement https://github.com/dangnguyendota-casino/andromeda-bep20-payment-gateway-document#get-user-completed-withdraw-transactions
+	// GetUserCompletedWithdrawTransactions implement https://github.com/oriS-casino/andromeda-bep20-payment-gateway-document#get-user-completed-withdraw-transactions
 	GetUserCompletedWithdrawTransactions(ctx context.Context, userID, pageSize, page int64) ([]WithdrawTx, error)
-	// GetDepositTransactionsCount implement https://github.com/dangnguyendota-casino/andromeda-bep20-payment-gateway-document#get-user-deposit-transactions-count
+	// GetDepositTransactionsCount implement https://github.com/oriS-casino/andromeda-bep20-payment-gateway-document#get-user-deposit-transactions-count
 	GetDepositTransactionsCount(ctx context.Context, userID int64) (GetDepositTransactionsCountReq, error)
-	// GetWithdrawTransactionsCount implement https://github.com/dangnguyendota-casino/andromeda-bep20-payment-gateway-document#get-user-withdraw-transactions-count
+	// GetWithdrawTransactionsCount implement https://github.com/oriS-casino/andromeda-bep20-payment-gateway-document#get-user-withdraw-transactions-count
 	GetWithdrawTransactionsCount(ctx context.Context, userID int64) (GetWithdrawTransactionsCountReq, error)
-	// GetUserPendingDepositTransactions implement https://github.com/dangnguyendota-casino/andromeda-bep20-payment-gateway-document#get-user-pending-deposit-transactions
+	// GetUserPendingDepositTransactions implement https://github.com/oriS-casino/andromeda-bep20-payment-gateway-document#get-user-pending-deposit-transactions
 	GetUserPendingDepositTransactions(ctx context.Context, userID int64) ([]DepositTx, error)
-	// GetUserPendingWithdrawTransactions implement https://github.com/dangnguyendota-casino/andromeda-bep20-payment-gateway-document#get-user-pending-withdraw-transactions
+	// GetUserPendingWithdrawTransactions implement https://github.com/oriS-casino/andromeda-bep20-payment-gateway-document#get-user-pending-withdraw-transactions
 	GetUserPendingWithdrawTransactions(ctx context.Context, userID int64) ([]WithdrawTx, error)
-	// CheckDepositTx implement https://github.com/dangnguyendota-casino/andromeda-bep20-payment-gateway-document#check-deposit-transaction
+	// CheckDepositTx implement https://github.com/oriS-casino/andromeda-bep20-payment-gateway-document#check-deposit-transaction
 	CheckDepositTx(ctx context.Context, req CheckDepositTransactionReq) error
 }
 
